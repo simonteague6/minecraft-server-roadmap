@@ -1,0 +1,526 @@
+/* ============================================
+   Server Roadmap — Minecraft-themed stylesheet
+   ============================================ */
+
+:root {
+  --bg: #1b1b1f;
+  --bg-panel: #2b2b30;
+  --bg-panel-dark: #212126;
+  --bg-slot: #8b8b8b;
+  --text: #e8e8e8;
+  --text-dim: #a8a8a8;
+  --mc-green: #54c454;
+  --mc-green-dark: #3f9e3f;
+  --xp-green: #7efc20;
+  --grass: #5d9c3f;
+  --grass-light: #7fb85a;
+  --dirt: #79553a;
+  --dirt-dark: #5e4228;
+  --stone: #7a7a7a;
+  --gold: #fcd34d;
+  --diamond: #4aedd9;
+  --redstone: #ef4444;
+  --emerald: #34d399;
+  --purple: #b57edc;
+  --border-px: 4px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  /* subtle "cave" noise */
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.015) 0 2px, transparent 2px),
+    radial-gradient(circle at 70% 60%, rgba(255,255,255,0.015) 0 2px, transparent 2px),
+    radial-gradient(circle at 40% 80%, rgba(0,0,0,0.15) 0 3px, transparent 3px);
+  background-size: 90px 90px, 130px 130px, 110px 110px;
+  color: var(--text);
+  font-family: 'VT323', monospace;
+  font-size: 20px;
+  line-height: 1.45;
+  image-rendering: pixelated;
+}
+
+h1, h2, h3, .pixel {
+  font-family: 'Press Start 2P', monospace;
+  line-height: 1.5;
+}
+
+/* ---------- Header: grass block banner ---------- */
+
+header {
+  position: relative;
+  text-align: center;
+  padding: 56px 20px 44px;
+  background:
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)),
+    repeating-linear-gradient(90deg,
+      var(--dirt) 0 16px, var(--dirt-dark) 16px 32px);
+  border-bottom: 8px solid var(--grass);
+  box-shadow: inset 0 -14px 0 rgba(0,0,0,0.25);
+}
+
+header::before {
+  /* grass fringe hanging from the top */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 18px;
+  background:
+    repeating-linear-gradient(90deg,
+      var(--grass) 0 12px,
+      var(--grass-light) 12px 20px,
+      var(--grass) 20px 28px,
+      #4c8433 28px 40px);
+  clip-path: polygon(
+    0 0, 100% 0, 100% 55%, 96% 55%, 96% 100%, 92% 100%, 92% 55%,
+    86% 55%, 86% 80%, 82% 80%, 82% 55%, 76% 55%, 76% 100%, 72% 100%,
+    72% 55%, 66% 55%, 66% 75%, 62% 75%, 62% 55%, 56% 55%, 56% 95%,
+    52% 95%, 52% 55%, 46% 55%, 46% 78%, 42% 78%, 42% 55%, 36% 55%,
+    36% 100%, 32% 100%, 32% 55%, 26% 55%, 26% 82%, 22% 82%, 22% 55%,
+    16% 55%, 16% 92%, 12% 92%, 12% 55%, 6% 55%, 6% 72%, 2% 72%, 2% 55%, 0 55%);
+}
+
+header h1 {
+  font-size: clamp(20px, 4.5vw, 40px);
+  color: #fff;
+  text-shadow: 4px 4px 0 #3f3f3f;
+  margin-bottom: 14px;
+}
+
+header h1 .accent { color: var(--mc-green); text-shadow: 4px 4px 0 #1d4a1d; }
+
+header .subtitle {
+  font-size: 22px;
+  color: var(--gold);
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.6);
+}
+
+header .version-badge {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 6px 14px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  color: #fff;
+  background: var(--mc-green-dark);
+  border: 3px solid #000;
+  box-shadow: inset -3px -3px 0 rgba(0,0,0,0.35), inset 3px 3px 0 rgba(255,255,255,0.25);
+}
+
+/* splash text, Minecraft-menu style */
+.splash {
+  position: absolute;
+  right: 8%;
+  top: 30px;
+  transform: rotate(-12deg);
+  color: #ffff55;
+  font-size: 18px;
+  text-shadow: 2px 2px 0 #3f3f00;
+  animation: splashPulse 0.7s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes splashPulse {
+  from { transform: rotate(-12deg) scale(1); }
+  to   { transform: rotate(-12deg) scale(1.08); }
+}
+
+/* ---------- XP progress bar (sticky) ---------- */
+
+.progress-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(27, 27, 31, 0.97);
+  border-bottom: 3px solid #000;
+  padding: 10px 16px 12px;
+}
+
+.progress-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  color: var(--xp-green);
+  text-shadow: 1px 1px 0 #204000;
+  margin-bottom: 6px;
+}
+
+.xp-bar {
+  height: 18px;
+  background: #0d0d0d;
+  border: 3px solid #000;
+  box-shadow: inset 0 0 0 2px #3a3a3a;
+  overflow: hidden;
+}
+
+.xp-fill {
+  height: 100%;
+  width: 0%;
+  background:
+    repeating-linear-gradient(90deg,
+      var(--xp-green) 0 10px, #65d417 10px 20px);
+  box-shadow: inset 0 -5px 0 rgba(0,0,0,0.3), inset 0 4px 0 rgba(255,255,255,0.3);
+  transition: width 0.4s steps(8);
+}
+
+/* ---------- Layout ---------- */
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 36px 16px 80px;
+}
+
+.intro {
+  background: var(--bg-panel);
+  border: var(--border-px) solid #000;
+  box-shadow:
+    inset -4px -4px 0 rgba(0,0,0,0.4),
+    inset 4px 4px 0 rgba(255,255,255,0.07);
+  padding: 22px 24px;
+  margin-bottom: 40px;
+  font-size: 21px;
+  color: var(--text-dim);
+}
+
+.intro strong { color: var(--text); }
+
+/* ---------- Phase sections ---------- */
+
+.phase {
+  margin-bottom: 48px;
+  border: var(--border-px) solid #000;
+  background: var(--bg-panel);
+  box-shadow:
+    inset -4px -4px 0 rgba(0,0,0,0.4),
+    inset 4px 4px 0 rgba(255,255,255,0.07),
+    0 6px 0 rgba(0,0,0,0.35);
+}
+
+.phase-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+  border-bottom: 4px solid #000;
+  cursor: pointer;
+  user-select: none;
+}
+
+.phase-header:hover { filter: brightness(1.12); }
+
+.phase-header h2 {
+  font-size: clamp(12px, 2.4vw, 17px);
+  color: #fff;
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.6);
+  flex: 1;
+}
+
+.phase-icon { font-size: 26px; line-height: 1; }
+
+.phase-count {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  color: rgba(255,255,255,0.85);
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.6);
+  white-space: nowrap;
+}
+
+.phase-toggle {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 12px;
+  color: #fff;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.6);
+}
+
+/* Per-phase header tints */
+.phase[data-theme="grass"]   .phase-header { background: linear-gradient(#5d9c3f, #467a2d); }
+.phase[data-theme="iron"]    .phase-header { background: linear-gradient(#9aa3ad, #6f7880); }
+.phase[data-theme="nether"]  .phase-header { background: linear-gradient(#8c2f2f, #5e1f1f); }
+.phase[data-theme="enchant"] .phase-header { background: linear-gradient(#7b4fa0, #57356f); }
+.phase[data-theme="end"]     .phase-header { background: linear-gradient(#3d3550, #262133); }
+.phase[data-theme="elytra"]  .phase-header { background: linear-gradient(#4a7a8c, #315563); }
+.phase[data-theme="gold"]    .phase-header { background: linear-gradient(#b8912e, #8a6b1e); }
+.phase[data-theme="beacon"]  .phase-header { background: linear-gradient(#2e8b8b, #1f6161); }
+
+.phase-body { padding: 20px; }
+
+.phase.collapsed .phase-body { display: none; }
+
+.phase-desc {
+  color: var(--text-dim);
+  margin-bottom: 18px;
+  font-size: 21px;
+}
+
+/* ---------- Task checklist ---------- */
+
+.task-list { list-style: none; }
+
+.task {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+  background: var(--bg-panel-dark);
+  border: 3px solid #000;
+  box-shadow: inset 2px 2px 0 rgba(255,255,255,0.05);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.task:hover { background: #2f2f36; }
+
+.task input[type="checkbox"] {
+  appearance: none;
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  margin-top: 2px;
+  background: var(--bg-slot);
+  border: 3px solid #000;
+  box-shadow:
+    inset -3px -3px 0 rgba(255,255,255,0.55),
+    inset 3px 3px 0 rgba(0,0,0,0.45);
+  cursor: pointer;
+  position: relative;
+}
+
+.task input[type="checkbox"]:checked {
+  background: var(--mc-green);
+}
+
+.task input[type="checkbox"]:checked::after {
+  content: '✔';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #1d4a1d;
+}
+
+.task-text { flex: 1; }
+
+.task-title {
+  font-size: 22px;
+  color: var(--text);
+}
+
+.task-note {
+  font-size: 18px;
+  color: var(--text-dim);
+  margin-top: 2px;
+}
+
+.task.done .task-title {
+  color: var(--text-dim);
+  text-decoration: line-through;
+  text-decoration-color: var(--mc-green);
+  text-decoration-thickness: 2px;
+}
+
+/* ---------- Farm cards ---------- */
+
+.farm-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 14px;
+  margin-top: 6px;
+}
+
+.farm-card {
+  background: var(--bg-panel-dark);
+  border: 3px solid #000;
+  box-shadow: inset 2px 2px 0 rgba(255,255,255,0.05);
+  padding: 14px;
+}
+
+.farm-card h3 {
+  font-size: 11px;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.farm-card p {
+  font-size: 18px;
+  color: var(--text-dim);
+}
+
+.badge {
+  display: inline-block;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 8px;
+  padding: 4px 8px;
+  border: 2px solid #000;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.badge.easy   { background: var(--mc-green); }
+.badge.medium { background: var(--gold); }
+.badge.hard   { background: var(--redstone); color: #fff; }
+
+/* ---------- Milestone / boss callouts ---------- */
+
+.milestone {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 22px 0 6px;
+  padding: 16px 18px;
+  background:
+    linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+    linear-gradient(#7b4fa0, #57356f);
+  border: 4px solid #000;
+  box-shadow: inset -4px -4px 0 rgba(0,0,0,0.4), inset 4px 4px 0 rgba(255,255,255,0.15);
+}
+
+.milestone .m-icon { font-size: 34px; }
+
+.milestone .m-text h3 {
+  font-size: 13px;
+  color: #fff;
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.6);
+  margin-bottom: 6px;
+}
+
+.milestone .m-text p { color: #ddd0ea; font-size: 19px; }
+
+/* ---------- Multiplayer tips ---------- */
+
+.tips {
+  background: var(--bg-panel);
+  border: var(--border-px) solid #000;
+  box-shadow:
+    inset -4px -4px 0 rgba(0,0,0,0.4),
+    inset 4px 4px 0 rgba(255,255,255,0.07);
+  padding: 22px 24px;
+  margin-bottom: 48px;
+}
+
+.tips h2 {
+  font-size: 15px;
+  color: var(--diamond);
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.6);
+  margin-bottom: 14px;
+}
+
+.tips ul { list-style: none; }
+
+.tips li {
+  padding: 8px 0 8px 30px;
+  position: relative;
+  color: var(--text-dim);
+  font-size: 21px;
+}
+
+.tips li::before {
+  content: '▸';
+  position: absolute;
+  left: 6px;
+  color: var(--mc-green);
+}
+
+/* ---------- Controls & footer ---------- */
+
+.controls {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.mc-button {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 11px;
+  color: #fff;
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.5);
+  background: linear-gradient(#8a8a8a, #6e6e6e);
+  border: 3px solid #000;
+  box-shadow:
+    inset -4px -4px 0 rgba(0,0,0,0.4),
+    inset 4px 4px 0 rgba(255,255,255,0.35);
+  padding: 14px 22px;
+  cursor: pointer;
+  margin: 0 6px 10px;
+}
+
+.mc-button:hover {
+  background: linear-gradient(#7aa2d6, #5d82b5);
+}
+
+.mc-button:active {
+  box-shadow:
+    inset 4px 4px 0 rgba(0,0,0,0.4),
+    inset -4px -4px 0 rgba(255,255,255,0.2);
+}
+
+footer {
+  text-align: center;
+  padding: 30px 16px 46px;
+  border-top: 8px solid var(--dirt-dark);
+  background:
+    repeating-linear-gradient(90deg,
+      #3a3a3a 0 16px, #303030 16px 32px);
+  color: var(--text-dim);
+  font-size: 18px;
+}
+
+footer .pixel { font-size: 9px; color: var(--stone); margin-top: 8px; }
+
+/* ---------- Confetti-ish achievement toast ---------- */
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%) translateY(150%);
+  background: #1c1c1c;
+  border: 3px solid #555;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 100;
+  transition: transform 0.35s steps(6);
+}
+
+.toast.show { transform: translateX(-50%) translateY(0); }
+
+.toast .t-icon { font-size: 26px; }
+
+.toast .t-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 9px;
+  color: #ffff55;
+  margin-bottom: 4px;
+}
+
+.toast .t-msg { font-size: 18px; color: #ddd; }
+
+@media (max-width: 560px) {
+  body { font-size: 18px; }
+  .splash { display: none; }
+  .farm-grid { grid-template-columns: 1fr; }
+}

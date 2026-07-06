@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Server Roadmap — Spawn to 100%</title>
+  <meta name="description" content="An ordered Minecraft survival multiplayer roadmap: every farm to build and every milestone to hit, from punching your first tree to 100% completion. Current for Java 26.2 (Chaos Cubed).">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛏️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <span class="splash" id="splash">Also try beating the game!</span>
+  <h1>SERVER <span class="accent">ROADMAP</span></h1>
+  <p class="subtitle">Every farm and milestone, in order — spawn to 100%</p>
+  <span class="version-badge">Current for Java 26.2 · Chaos Cubed</span>
+</header>
+
+<div class="progress-wrap">
+  <div class="progress-inner">
+    <div class="progress-label">
+      <span id="progress-text">0 / 0 complete</span>
+      <span id="progress-pct">0%</span>
+    </div>
+    <div class="xp-bar"><div class="xp-fill" id="xp-fill"></div></div>
+  </div>
+</div>
+
+<main>
+
+  <section class="intro">
+    <p><strong>Never wonder "what should we build next?" again.</strong> This is the full progression path for a fresh survival multiplayer server — every phase, farm, and boss in the order that unlocks the next thing. Check tasks off as your server completes them; progress saves in your browser. Content verified against the Minecraft Wiki for <strong>Java 26.2 "Chaos Cubed"</strong> (Mojang switched to year.drop version numbers in 2026 — 26.2 follows 1.21.11).</p>
+  </section>
+
+  <!-- ================= PHASE 1 ================= -->
+  <section class="phase" data-theme="grass">
+    <div class="phase-header">
+      <span class="phase-icon">🌱</span>
+      <h2>Phase 1 — Day One</h2>
+      <span class="phase-count">0/9</span>
+      <span class="phase-toggle">−</span>
+    </div>
+    <div class="phase-body">
+      <p class="phase-desc">Survive the first nights and lay the groundwork. Speed matters less than not losing your stuff.</p>
+      <ul class="task-list">
+        <li class="task" data-id="p1-tools"><input type="checkbox"><div class="task-text"><div class="task-title">Punch trees → wood tools → stone tools</div><div class="task-note">Full stone kit within the first 10 minutes.</div></div></li>
+        <li class="task" data-id="p1-beds"><input type="checkbox"><div class="task-text"><div class="task-title">Beds for every player</div><div class="task-note">Kill sheep or shear wool. Set spawns immediately — and sleeping skips phantoms.</div></div></li>
+        <li class="task" data-id="p1-shelter"><input type="checkbox"><div class="task-text"><div class="task-title">Communal starter shelter</div><div class="task-note">Near spawn, with a shared chest and a couple of furnaces.</div></div></li>
+        <li class="task" data-id="p1-crops"><input type="checkbox"><div class="task-text"><div class="task-title">🚜 FARM #1: Basic crop farm</div><div class="task-note">Till near water; plant every seed, carrot, and potato you find. Food security first.</div></div></li>
+        <li class="task" data-id="p1-animals"><input type="checkbox"><div class="task-text"><div class="task-title">🚜 FARM #2: Animal pens</div><div class="task-note">2+ each of cows, sheep, chickens, pigs. Leather → books later. Egg + lava = classic first auto cooked-chicken farm.</div></div></li>
+        <li class="task" data-id="p1-iron"><input type="checkbox"><div class="task-text"><div class="task-title">Full iron tools + shield + bucket + flint &amp; steel</div><div class="task-note">Cheap stopgap while you mine: copper tools/armor (added 1.21.9) don't compete with your iron needs.</div></div></li>
+        <li class="task" data-id="p1-water"><input type="checkbox"><div class="task-text"><div class="task-title">Carry a water bucket at all times</div><div class="task-note">MLG saves, lava-to-obsidian, and it never stops being useful.</div></div></li>
+        <li class="task" data-id="p1-village"><input type="checkbox"><div class="task-text"><div class="task-title">Locate a village — write down the coords</div><div class="task-note">Free food, beds, and your future villager workforce. Don't burn it down.</div></div></li>
+        <li class="task" data-id="p1-coords"><input type="checkbox"><div class="task-text"><div class="task-title">Set up a shared coordinates system</div><div class="task-note">Signs at spawn, a book &amp; quill, or a pinned Discord message. Future-you says thanks.</div></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= PHASE 2 ================= -->
+  <section class="phase" data-theme="iron">
+    <div class="phase-header">
+      <span class="phase-icon">⚙️</span>
+      <h2>Phase 2 — Iron, Villagers &amp; Infrastructure</h2>
+      <span class="phase-count">0/8</span>
+      <span class="phase-toggle">−</span>
+    </div>
+    <div class="phase-body">
+      <p class="phase-desc">The industrial revolution. The iron farm and trading hall are the two biggest unlocks in the entire game — everything after this gets easier.</p>
+      <ul class="task-list">
+        <li class="task" data-id="p2-diamonds"><input type="checkbox"><div class="task-text"><div class="task-title">Mine diamonds (Y = -53 to -59)</div><div class="task-note">Diamond pickaxe minimum — you need it for obsidian.</div></div></li>
+        <li class="task" data-id="p2-ironfarm"><input type="checkbox"><div class="task-text"><div class="task-title">🚜 FARM #3: Iron farm</div><div class="task-note">THE early-game unlock: infinite hoppers, rails, anvils, buckets, armor. 3+ villagers with beds + a zombie scare = golem spawns. Build one, share it.</div></div></li>
+        <li class="task" data-id="p2-trading"><input type="checkbox"><div class="task-text"><div class="task-title">🚜 FARM #4: Villager breeder + trading hall</div><div class="task-note">Cure zombie villagers for 1-emerald trades. Priorities: librarian (Mending!), farmer (emerald printer), armorer, toolsmith, cleric.</div></div></li>
+        <li class="task" data-id="p2-sugarcane"><input type="checkbox"><div class="task-text"><div class="task-title">🚜 FARM #5: Sugarcane farm</div><div class="task-note">Paper → books → bookshelves, plus emeralds via librarians. Observer-piston designs are the standard.</div></div></li>
+        <li class="task" data-id="p2-trees"><input type="checkbox"><div class="task-text"><div class="task-title">🚜 FARM #6: Tree farm + bamboo farm</div><div class="task-note">Even a manual bonemeal grid counts. Bamboo = best renewable furnace fuel + scaffolding.</div></div></li>
+        <li class="task" data-id="p2-enchant"><input type="checkbox"><div class="task-text"><div class="task-title">Enchanting table + 15 bookshelves</div><div class="task-note">Get Mending, Efficiency, Unbreaking, and Protection books from your librarians.</div></div></li>
+        <li class="task" data-id="p2-mobfarm"><input type="checkbox"><div class="task-text"><div class="task-title">🚜 FARM #7: Mob/XP farm</div><div class="task-note">Spawner-based (easy) or dark room (medium). XP, string, bones, arrows. Build far from where people AFK — mob caps are shared.</div></div></li>
+        <li class="task" data-id="p2-trial"><input type="checkbox"><div class="task-text"><div class="task-title">Raid a Trial Chamber as a group</div><div class="task-note">Trial keys, wind charges, breeze rods — and a shot at the Heavy Core for the Mace.</div></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= PHASE 3 ================= -->
+  <section class="phase" data-theme="nether">
+    <div class="phase-header">
+      <span class="phase-icon">🔥</span>
+      <h2>Phase 3 — The Nether</h2>
+      <span class="phase-count">0/9</span>
+      <span class="phase-toggle">−</span>
+    </div>
+    <div class="phase-body">
+      <p class="phase-desc">Blaze rods, gold, pearls, and the fastest travel in the game. Bring fire resistance and don't look the piglins in the eye without gold armor.</p>
+      <ul class="task-list">
+        <li class="task" data-id="p3-portal"><input type="checkbox"><div class="task-text"><div class="task-title">Build the portal — then secure BOTH sides</div><div class="task-note">Cobblestone-proof the portal room before anything else. Ghast fireballs open portals to chaos.</div></div></li>
+        <li class="task" data-id="p3-fortress"><input type="checkbox"><div class="task-text"><div class="task-title">Find a Nether fortress → 🚜 FARM #8: Blaze farm</div><div class="task-note">Blaze rods power brewing and eyes of ender. A spawner-based blaze farm is safe and future-proof.</div></div></li>
+        <li class="task" data-id="p3-brewing"><input type="checkbox"><div class="task-text"><div class="task-title">Brewing stand + core potions</div><div class="task-note">Fire Resistance (mandatory for nether farms), Strength, Healing.</div></div></li>
+        <li class="task" data-id="p3-bastion"><input type="checkbox"><div class="task-text"><div class="task-title">Loot a bastion</div><div class="task-note">Netherite upgrade smithing template, snout armor trim, Pigstep.</div></div></li>
+        <li class="task" data-id="p3-barter"><input type="checkbox"><div class="task-text"><div class="task-title">Barter with piglins for ender pearls</div><div class="task-note">Wear at least one gold armor piece or they attack on sight.</div></div></li>
+        <li class="task" data-id="p3-goldfarm"><input type="checkbox"><div class="task-text"><div class="task-title">🚜 FARM #9: Gold/XP farm</div><div class="task-note">The bartering engine of the mid-game: gold → pearls, string, fire res potions. Best XP before the End. Portal-based or nether-roof designs.</div></div></li>
+        <li class="task" data-id="p3-hub"><input type="checkbox"><div class="task-text"><div class="task-title">Nether hub network (roof or ice roads)</div><div class="task-note">8:1 travel — connect every player's base through the Nether.</div></div></li>
+        <li class="task" data-id="p3-ghast"><input type="checkbox"><div class="task-text"><div class="task-title">Grow Happy Ghasts 🎈</div><div class="task-note">Dried ghasts spawn in Soul Sand Valley fossils (or craft: 8 ghast tears + soul sand); rehydrate in water ~20 min. A flying platform that carries 4 players — the best SMP build tool in years.</div></div></li>
+        <li class="task" data-id="p3-wskulls"><input type="checkbox"><div class="task-text"><div class="task-title">Start collecting wither skeleton skulls</div><div class="task-note">Skull-hunting trips now, or 🚜 FARM #10: wither skeleton farm (hard — fortress crossroads design). You need 3 skulls soon.</div></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= PHASE 4 ================= -->
+  <section class="phase" data-theme="enchant">
+    <div class="phase-header">
+      <span class="phase-icon">✨</span>
+      <h2>Phase 4 — Gear Up &amp; Find the Stronghold</h2>
+      <span class="phase-count">0/5</span>
+      <span class="phase-toggle">−</span>
+    </div>
+    <div class="phase-body">
+      <p class="phase-desc">Don't fight the dragon in half-enchanted armor. Kit everyone out, then triangulate.</p>
+      <ul class="task-list">
+        <li class="task" data-id="p4-armor"><input type="checkbox"><div class="task-text"><div class="task-title">Full enchanted diamond armor + tools for EVERY player</div><div class="task-note">Protection IV, Mending, Unbreaking III across the board.</div></div></li>
+        <li class="task" data-id="p4-netherite"><input type="checkbox"><div class="task-text"><div class="task-title">Ancient debris (Y = 15) → netherite weapon + pickaxe</div><div class="task-note">Bed-mining or TNT. Needs the upgrade template from a bastion (duplicate it: 7 diamonds + netherrack).</div></div></li>
+        <li class="task" data-id="p4-eyes"><input type="checkbox"><div class="task-text"><div class="task-title">Craft eyes of ender → triangulate the stronghold</div><div class="task-note">Blaze powder + ender pearls. Throw, walk, repeat.</div></div></li>
+        <li class="task" data-id="p4-base"><input type="checkbox"><div class="task-text"><div class="task-title">Forward base at the stronghold</div><div class="task-note">Beds, a chest of backup gear, and a secured portal room.</div></div></li>
+        <li class="task" data-id="p4-stock"><input type="checkbox"><div class="task-text"><div class="task-title">Stock the dragon kit</div><div class="task-note">Golden apples, Slow Falling + Healing potions, bow + arrows (for perching), building blocks, water bucket.</div></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= PHASE 5 ================= -->
+  <section class="phase" data-theme="end">
+    <div class="phase-header">
+      <span class="phase-icon">🐉</span>
+      <h2>Phase 5 — The End &amp; the Dragon</h2>
+      <span class="phase-count">0/5</span>
+      <span class="phase-toggle">−</span>
+    </div>
+    <div class="phase-body">
+      <p class="phase-desc">Make it a server event — the dragon is dramatically easier (and more fun) with everyone there.</p>
+      <div class="milestone">
+        <span class="m-icon">🏆</span>
+        <div class="m-text"><h3>Free the End</h3><p>Crystals first (bow them down, climb the caged ones), then hit the dragon when it perches. Beds are not a strategy here — they're an explosion.</p></div>
+      </div>
+      <ul class="task-list">
+        <li class="task" data-id="p5-dragon"><input type="checkbox"><div class="task-text"><div class="task-title">⚔️ Defeat the Ender Dragon together</div><div class="task-note">The headline server event. Screenshot it.</div></div></li>
+        <li class="task" data-id="p5-egg"><input type="checkbox"><div class="task-text"><div class="task-title">Collect the dragon egg</div><div class="task-note">Piston or torch trick. Decide who keeps it BEFORE the fight.</div></div></li>
+        <li class="task" data-id="p5-elytra"><input type="checkbox"><div class="task-text"><div class="task-title">End city + End ship → Elytra</div><div class="task-note">Enter an End gateway (pearl or build through). Eventually one elytra per player, plus shulker shells.</div></div></li>
+        <li class="task" data-id="p5-enderman"><input type="checkbox"><div class="task-text"><div class="task-title">🚜 FARM #11: Enderman farm</div><div class="task-note">Endermite-on-a-leash design, 128+ blocks off the main island. Fastest XP in the game — 0 to 30 levels in about a minute — plus infinite pearls.</div></div></li>
+        <li class="task" data-id="p5-shulker"><input type="checkbox"><div class="task-text"><div class="task-title">🚜 FARM #12: Shulker shell farm</div><div class="task-note">Shulkers duplicate when hit by shulker projectiles. Infinite shulker boxes change everything about server logistics.</div></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= PHASE 6 ================= -->
+  <section class="phase" data-theme="beacon">
+    <div class="phase-header">
+      <span class="phase-icon">💎</span>
+      <h2>Phase 6 — Post-Dragon Power Curve</h2>
+      <span class="phase-count">0/6</span>
+      <span class="phase-toggle">−</span>
+    </div>
+    <div class="phase-body">
+      <p class="phase-desc">The dragon was the midpoint, not the end. Now you build the machines that make everything else trivial.</p>
+      <ul class="task-list">
+        <li class="task" data-id="p6-wither"><input type="checkbox"><div class="task-text"><div class="task-title">⚔️ Kill the Wither → Nether Star → beacon</div><div class="task-note">3 skulls + 4 soul sand. Fight it underground or at bedrock; bring the whole server.</div></div></li>
+        <li class="task" data-id="p6-beacon"><input type="checkbox"><div class="task-text"><div class="task-title">Full-power beacon pyramid (164 blocks)</div><div class="task-note">Your iron farm makes this trivial. Classic move: Haste II beacon at the shared quarry.</div></div></li>
+        <li class="task" data-id="p6-raid"><input type="checkbox"><div class="task-text"><div class="task-title">🚜 FARM #13: Raid farm</div><div class="task-note">⚠️ Reworked in 1.21: Bad Omen now comes from drinking ominous bottles, dropped only by outpost captains outside a raid. Pre-1.21 tutorials are obsolete — use a current design. Still the best emerald + totem source.</div></div></li>
+        <li class="task" data-id="p6-guardian"><input type="checkbox"><div class="task-text"><div class="task-title">🚜 FARM #14: Guardian farm</div><div class="task-note">Ocean monument, modern nether-portal designs skip the drain. XP rivaling the enderman farm + bulk prismarine and sea lanterns.</div></div></li>
+        <li class="task" data-id="p6-conduit"><input type="checkbox"><div class="task-text"><div class="task-title">Activate a conduit</div><div class="task-note">8 nautilus shells + Heart of the Sea. Pairs with the guardian farm project. Nautilus mounts (1.21.11) make ocean work easier too.</div></div></li>
+        <li class="task" data-id="p6-wskelly"><input type="checkbox"><div class="task-text"><div class="task-title">Finish the wither skeleton farm</div><div class="task-note">Skulls for more beacons; wither roses from Wither kills feed rose-based killing chambers.</div></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= PHASE 7 ================= -->
+  <section class="phase" data-theme="gold">
+    <div class="phase-header">
+      <span class="phase-icon">🏆</span>
+      <h2>Phase 7 — Late Game &amp; Megaprojects</h2>
+      <span class="phase-count">0/9</span>
+      <span class="phase-toggle">−</span>
+    </div>
+    <div class="phase-body">
+      <p class="phase-desc">Everything from here is optional — and it's the part people play for years.</p>
+      <ul class="task-list">
+        <li class="task" data-id="p7-autotree"><input type="checkbox"><div class="task-text"><div class="task-title">🚜 FARM #15: Automatic tree farm + crafter super smelter</div><div class="task-note">The Crafter (1.21) turns raw farms into finished-product factories: auto sticks, auto TNT, auto bread.</div></div></li>
+        <li class="task" data-id="p7-sorting"><input type="checkbox"><div class="task-text"><div class="task-title">🚜 FARM #16: Copper golem sorting hall</div><div class="task-note">New in 1.21.9: dump items into copper chests, golems sort into matching wooden chests. A storage room with zero redstone.</div></div></li>
+        <li class="task" data-id="p7-copper"><input type="checkbox"><div class="task-text"><div class="task-title">🚜 FARM #17: Copper farm (drowned)</div><div class="task-note">Copper golems, chests, lanterns, and building demand make copper real again. Tridents + nautilus shells as a bonus.</div></div></li>
+        <li class="task" data-id="p7-honey"><input type="checkbox"><div class="task-text"><div class="task-title">🚜 FARM #18: Honey/bee farm</div><div class="task-note">Honey blocks for redstone, honeycomb to wax all that copper. Campfire under the hive keeps the bees calm.</div></div></li>
+        <li class="task" data-id="p7-froglight"><input type="checkbox"><div class="task-text"><div class="task-title">🚜 FARM #19: Froglight farm</div><div class="task-note">Frogs eat small magma cubes → froglights. Frog variant sets the color: temperate = ochre, cold = verdant, warm = pearlescent. Build at a bastion magma cube spawner.</div></div></li>
+        <li class="task" data-id="p7-sniffer"><input type="checkbox"><div class="task-text"><div class="task-title">Sniffer side quest 🐢</div><div class="task-note">Brush suspicious blocks in warm ocean ruins for sniffer eggs → torchflowers &amp; pitcher plants. Fun, not a power farm.</div></div></li>
+        <li class="task" data-id="p7-sulfur"><input type="checkbox"><div class="task-text"><div class="task-title">Explore the Sulfur Caves (new in 26.2)</div><div class="task-note">Sulfur cubes are passive, bucketable, and grow with slimeballs; potent sulfur geysers launch you upward. No farm meta yet — invent one.</div></div></li>
+        <li class="task" data-id="p7-creeper"><input type="checkbox"><div class="task-text"><div class="task-title">🚜 FARM #20: Creeper/gunpowder farm</div><div class="task-note">If you haven't already: elytra rockets forever. Trapdoor-ceiling design with cats, unchanged for years. (Build earlier if rockets run low!)</div></div></li>
+        <li class="task" data-id="p7-mega"><input type="checkbox"><div class="task-text"><div class="task-title">Megabuilds</div><div class="task-note">Shopping district, diamond economy, mob museum, perimeter farms. Happy Ghast highly recommended as the group scaffold.</div></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= COMPLETION ================= -->
+  <section class="phase" data-theme="elytra">
+    <div class="phase-header">
+      <span class="phase-icon">🏁</span>
+      <h2>The Completion Checklist</h2>
+      <span class="phase-count">0/10</span>
+      <span class="phase-toggle">−</span>
+    </div>
+    <div class="phase-body">
+      <p class="phase-desc">What "finishing Minecraft" actually means on a Java SMP. The trophy wall.</p>
+      <ul class="task-list">
+        <li class="task" data-id="c-elytra-all"><input type="checkbox"><div class="task-text"><div class="task-title">Elytra + full netherite for every player</div></div></li>
+        <li class="task" data-id="c-beacon"><input type="checkbox"><div class="task-text"><div class="task-title">Max beacon at every major base ("Beaconator")</div></div></li>
+        <li class="task" data-id="c-mace"><input type="checkbox"><div class="task-text"><div class="task-title">Mace + Heavy Core ("Over-Overkill": 50 hearts in one hit)</div><div class="task-note">Heavy Core from Trial Chamber ominous vaults.</div></div></li>
+        <li class="task" data-id="c-warden"><input type="checkbox"><div class="task-text"><div class="task-title">Loot an Ancient City (Swift Sneak, Silence trim)</div><div class="task-note">Beating the Warden = bragging rights. Sneaking past = wisdom.</div></div></li>
+        <li class="task" data-id="c-trims"><input type="checkbox"><div class="task-text"><div class="task-title">All 18 armor trims ("Smithing with Style")</div><div class="task-note">The rare ones: Spire, Snout, Rib, Ward, Silence, Vex, Tide, Wayfinder.</div></div></li>
+        <li class="task" data-id="c-discs"><input type="checkbox"><div class="task-text"><div class="task-title">Every music disc</div><div class="task-note">Now includes Creator, Precipice, Tears, Lava Chicken, and Bounce (26.2).</div></div></li>
+        <li class="task" data-id="c-biomes"><input type="checkbox"><div class="task-text"><div class="task-title">"Adventuring Time" — visit every biome</div><div class="task-note">Elytra + a stack of rockets. Sulfur Caves count now.</div></div></li>
+        <li class="task" data-id="c-2by2"><input type="checkbox"><div class="task-text"><div class="task-title">"Two by Two" — breed every breedable mob</div><div class="task-note">Includes armadillo, sniffer, and camel these days.</div></div></li>
+        <li class="task" data-id="c-hdwgh"><input type="checkbox"><div class="task-text"><div class="task-title">"How Did We Get Here?" — every status effect at once</div><div class="task-note">The definitive end-game party trick. Harder than ever with the 1.21 effects added.</div></div></li>
+        <li class="task" data-id="c-100"><input type="checkbox"><div class="task-text"><div class="task-title">💯 100% advancements</div><div class="task-note">The true "we finished the game" flag. Re-summon the dragon (4 end crystals) so latecomers get theirs too.</div></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= FARM ORDER REFERENCE ================= -->
+  <section class="phase" data-theme="grass">
+    <div class="phase-header">
+      <span class="phase-icon">🚜</span>
+      <h2>Farm Build Order — Quick Reference</h2>
+      <span class="phase-count"></span>
+      <span class="phase-toggle">−</span>
+    </div>
+    <div class="phase-body">
+      <p class="phase-desc">All the farms in one place, in build order. Difficulty assumes you follow a current tutorial for Java 1.21+ / 26.x.</p>
+      <div class="farm-grid">
+        <div class="farm-card"><span class="badge easy">EASY</span><h3>1. Crop farm</h3><p>Food, breeding fodder, emeralds via farmers. Automate later with villagers or observer bonemeal.</p></div>
+        <div class="farm-card"><span class="badge easy">EASY</span><h3>2. Animal pens</h3><p>Steak, leather, wool, eggs. Egg + lava cooked-chicken farm is the classic first automation.</p></div>
+        <div class="farm-card"><span class="badge medium">MEDIUM</span><h3>3. Iron farm</h3><p>Infinite iron. 3+ villagers + beds + zombie scare. The biggest unlock in the game — build it early, share it.</p></div>
+        <div class="farm-card"><span class="badge medium">MEDIUM</span><h3>4. Villager trading hall</h3><p>Emeralds, Mending books, diamond gear. Cure zombie villagers for near-free trades.</p></div>
+        <div class="farm-card"><span class="badge easy">EASY</span><h3>5. Sugarcane farm</h3><p>Paper → books → bookshelves + emeralds. Observer-piston designs are standard.</p></div>
+        <div class="farm-card"><span class="badge easy">EASY</span><h3>6. Tree + bamboo farm</h3><p>Wood and the best renewable fuel. Manual bonemeal grid is fine until the crafter era.</p></div>
+        <div class="farm-card"><span class="badge easy">EASY</span><h3>7. Mob/XP farm</h3><p>Spawner-based or dark room. XP, string, bones, arrows. Build away from AFK spots.</p></div>
+        <div class="farm-card"><span class="badge medium">MEDIUM</span><h3>8. Blaze farm</h3><p>Fortress spawner. Rods for brewing and eyes of ender. Bring Fire Resistance.</p></div>
+        <div class="farm-card"><span class="badge medium">MEDIUM</span><h3>9. Gold/XP farm</h3><p>Gold → piglin bartering → pearls, string, fire res. Best XP before the End.</p></div>
+        <div class="farm-card"><span class="badge hard">HARD</span><h3>10. Wither skeleton farm</h3><p>Fortress crossroads design. Skulls for the Wither and beacons; Looting III essential.</p></div>
+        <div class="farm-card"><span class="badge medium">MEDIUM</span><h3>11. Enderman farm</h3><p>Post-dragon, 128+ blocks off the main End island. Fastest XP in the game + infinite pearls.</p></div>
+        <div class="farm-card"><span class="badge hard">HARD</span><h3>12. Shulker shell farm</h3><p>Shulker-projectile duplication. Infinite shulker boxes = SMP logistics solved.</p></div>
+        <div class="farm-card"><span class="badge hard">HARD</span><h3>13. Raid farm</h3><p>Emeralds + totems. ⚠️ 1.21 rework: farm ominous bottles at an outpost first — old tutorials are obsolete.</p></div>
+        <div class="farm-card"><span class="badge hard">HARD</span><h3>14. Guardian farm</h3><p>Ocean monument → nether portal designs (no draining). Huge XP + prismarine.</p></div>
+        <div class="farm-card"><span class="badge medium">MEDIUM</span><h3>15. Creeper farm</h3><p>Gunpowder for elytra rockets and TNT. Trapdoor ceilings + cats. Build before rockets run dry.</p></div>
+        <div class="farm-card"><span class="badge hard">HARD</span><h3>16. Auto tree farm</h3><p>TNT-duper or crafter-fed designs. Wood at industrial scale for megabuilds.</p></div>
+        <div class="farm-card"><span class="badge easy">EASY</span><h3>17. Copper golem sorter</h3><p>1.21.9: copper chests + golems = a full storage system with zero redstone.</p></div>
+        <div class="farm-card"><span class="badge medium">MEDIUM</span><h3>18. Copper farm</h3><p>Drowned drop copper — demand is back with copper gear, chests, and golems.</p></div>
+        <div class="farm-card"><span class="badge easy">EASY</span><h3>19. Honey farm</h3><p>Dispenser + bottles under the hive, campfire below. Honeycomb waxes your copper.</p></div>
+        <div class="farm-card"><span class="badge medium">MEDIUM</span><h3>20. Froglight farm</h3><p>Frogs eat small magma cubes. Frog variant picks the color — bring all three types.</p></div>
+        <div class="farm-card"><span class="badge medium">MEDIUM</span><h3>21. Wither rose farm</h3><p>Roses from Wither kills → black dye and killing-chamber flowers for other farms.</p></div>
+        <div class="farm-card"><span class="badge medium">MEDIUM</span><h3>22. Moss/bonemeal farm</h3><p>The bonemeal engine that feeds tree and crop automation. Pairs with the crafter.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MULTIPLAYER TIPS ================= -->
+  <section class="tips">
+    <h2>💠 Multiplayer Ground Rules</h2>
+    <ul>
+      <li><strong>Shared spawn town, separate bases.</strong> Communal farms and portal hub at spawn; personal bases 500+ blocks out.</li>
+      <li><strong>One iron farm, one trading hall — shared.</strong> Duplicates waste effort and can hurt spawn rates.</li>
+      <li><strong>Coordinate AFK sessions.</strong> Mob caps are shared per dimension — someone caving nearby tanks your farm rates.</li>
+      <li><strong>Divide the tech tree.</strong> One player on villagers, one on the Nether, one on storage/redstone, one on building. Rotate.</li>
+      <li><strong>Bosses are server events.</strong> Dragon and Wither with everyone online, scheduled like a raid night.</li>
+      <li><strong>Decide the awkward stuff day one:</strong> who keeps the dragon egg, whether TNT-duping is allowed, and the no-grief policy.</li>
+      <li><strong>Use the player locator bar</strong> and a shared Happy Ghast for group builds — both recent additions made for exactly this.</li>
+    </ul>
+  </section>
+
+  <div class="controls">
+    <button class="mc-button" id="reset-btn">⟲ Reset Progress</button>
+  </div>
+
+</main>
+
+<div class="toast" id="toast">
+  <span class="t-icon">🏆</span>
+  <div><div class="t-title">Advancement Made!</div><div class="t-msg"></div></div>
+</div>
+
+<footer>
+  <p>Content researched against the <a href="https://minecraft.wiki" style="color:#7fb85a">Minecraft Wiki</a> for Java Edition 26.2 "Chaos Cubed" (June 2026).</p>
+  <p>Progress is saved in your browser only — each player tracks their own server.</p>
+  <p class="pixel">NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
