@@ -8,7 +8,7 @@
 const SERVER_ADDRESS = "dvd-vitalize.gl.joinmc.link";
 // BlueMap web UI. LAN address by default; swap for a public URL if you
 // ever tunnel/proxy the map.
-const BLUEMAP_URL = "http://10.0.0.29:8100";
+const BLUEMAP_URL = "minecraft-map.simonteague.xyz";
 // ========================================================================
 
 const STATUS_API = "https://api.mcstatus.io/v2/status/java/";
