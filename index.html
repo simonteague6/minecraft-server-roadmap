@@ -20,6 +20,24 @@
   <span class="version-badge">Current for Java 26.2 · Chaos Cubed</span>
 </header>
 
+<!-- ================= SERVER HUB ================= -->
+<section class="server-hub">
+  <div class="hub-inner">
+    <div class="server-status">
+      <span class="status-dot unknown" id="status-dot"></span>
+      <div class="status-text">
+        <div class="status-line" id="status-line">Checking server…</div>
+        <div class="status-sub" id="status-sub"></div>
+        <div class="status-addr" id="server-addr"></div>
+      </div>
+    </div>
+    <div class="hub-links">
+      <a class="mc-button hub-btn" id="map-link" href="#">🗺️ Live Map</a>
+      <a class="mc-button hub-btn" href="stats.html">🏆 Leaderboards</a>
+    </div>
+  </div>
+</section>
+
 <div class="progress-wrap">
   <div class="progress-inner">
     <div class="progress-label">
@@ -290,5 +308,6 @@
 </footer>
 
 <script src="script.js"></script>
+<script src="server.js"></script>
 </body>
 </html>
